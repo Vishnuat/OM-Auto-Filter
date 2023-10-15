@@ -42,7 +42,7 @@ async def start(client, message):
             InlineKeyboardButton("Aʙᴏᴜᴛ ✨", callback_data="about")
         ]]
         m = await message.reply_sticker("") 
-        await asyncio.sleep(2)
+        await asyncio.sleep(0)
         await message.reply_photo(photo=random.choice(PICS), caption=START_MESSAGE.format(user=message.from_user.mention, bot=client.mention), reply_markup=InlineKeyboardMarkup(buttons), parse_mode=enums.ParseMode.HTML)
         return await m.delete()
         
